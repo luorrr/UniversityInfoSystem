@@ -111,7 +111,7 @@
         });
     };
     function submitTeacher() {
-        $.post("<%=nwnuIndexPath %>teacherInput", $("#submitStudentForm").serialize(),
+        $.post("<%=nwnuIndexPath %>teacherInput", $("#submitTeacherForm").serialize(),
                 function(data){
             if(data == "InOK") {
                 alert("信息提交成功！");

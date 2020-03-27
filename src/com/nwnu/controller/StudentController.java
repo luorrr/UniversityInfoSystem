@@ -32,8 +32,8 @@ public class StudentController {
 		Integer rows;
 		String flag = "Fail";
 		student.setRecordDate(new java.sql.Date(new Date().getTime()));
-		System.out.println(student.getId()+"\n"+student.getRecordDate());
-		System.out.println(this.studentService.getStudentByIdAndDate(student));
+		//System.out.println(student.getId()+"\n"+student.getRecordDate());
+		//System.out.println(this.studentService.getStudentByIdAndDate(student));
 		if(this.studentService.getStudentByIdAndDate(student) == null) {
 			rows = this.studentService.insertStudent(student);
 			flag = "InOK";

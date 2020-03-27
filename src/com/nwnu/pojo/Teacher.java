@@ -31,6 +31,13 @@ public class Teacher {
 	
 	/**
 	 * ·构造函数
+	 */
+	public Teacher() {
+		
+	}
+	
+	/**
+	 * ·构造函数
 	 * 
 	 * @param count
 	 * @param recordDate

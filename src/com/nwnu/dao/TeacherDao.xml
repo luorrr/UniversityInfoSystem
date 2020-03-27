@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nwnu.dao.TeacherDao">
 
-	<insert id="insertStudent" parameterType="com.nwnu.pojo.Teacher">
+	<insert id="insertTeacher" parameterType="com.nwnu.pojo.Teacher">
         insert into teacherinfo(
         <if test="id != null and id != ''">
             id,
@@ -65,5 +65,11 @@
         </if>
         )
     </insert>
+    
+    <select id="getTeacherByIdAndDate" parameterType="com.nwnu.pojo.Teacher" resultType="com.nwnu.pojo.Teacher">
+        <if test="id != null and id != ''">
+            select * from teacherinfo where id = "${id}" and recordDate = "${recordDate}"
+        </if>
+    </select>
 
 </mapper>

@@ -14,4 +14,5 @@ import com.nwnu.pojo.Teacher;
 @Repository
 public interface TeacherDao {
 	public Integer insertTeacher(Teacher teacher);
+	public Teacher getTeacherByIdAndDate(Teacher teacher);
 }

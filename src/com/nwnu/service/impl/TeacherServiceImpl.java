@@ -24,4 +24,9 @@ public class TeacherServiceImpl implements TeacherService {
 	public Integer insertTeacher (Teacher teacher) {
 		return this.teacherDao.insertTeacher(teacher);
 	}
+	
+	@Override
+	public Teacher getTeacherByIdAndDate(Teacher teacher) {
+		return this.teacherDao.getTeacherByIdAndDate(teacher);
+	}
 }

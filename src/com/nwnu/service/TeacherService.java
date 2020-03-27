@@ -11,4 +11,5 @@ import com.nwnu.pojo.Teacher;
 
 public interface TeacherService {
 	public Integer insertTeacher(Teacher teacher);
+	public Teacher getTeacherByIdAndDate(Teacher teacher);
 }
