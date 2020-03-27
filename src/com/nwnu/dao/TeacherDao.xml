@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nwnu.dao.TeacherDao">
+
+	<insert id="insertStudent" parameterType="com.nwnu.pojo.Teacher">
+        insert into teacherinfo(
+        <if test="id != null and id != ''">
+            id,
+        </if>
+        <if test="name != null and name != ''">
+            name,
+        </if>
+        <if test="sex != null and sex != ''">
+            sex,
+        </if>
+        <if test="college != null and college != ''">
+            college,
+        </if>
+        <if test="phoneNumber != null and phoneNumber != ''">
+            phoneNumber,
+        </if>
+            recordDate,
+        <if test="province != null and province != ''">
+            province,
+        </if>
+        <if test="city != null and city != ''">
+            city,
+        </if>
+        <if test="diagnosed != null and diagnosed != ''">
+            diagnosed,
+        </if>
+        <if test="temperature != null and temperature != ''">
+            temperature
+        </if>
+        )values(
+        <if test="id != null and id != ''">
+            "${id}",
+        </if>
+        <if test="name != null and name != ''">
+            "${name}",
+        </if>
+        <if test="sex != null and sex != ''">
+            "${sex}",
+        </if>
+        <if test="college != null and college != ''">
+            "${college}",
+        </if>
+        <if test="phoneNumber != null and phoneNumber != ''">
+            "${phoneNumber}",
+        </if>
+            "${recordDate}",
+        <if test="province != null and province != ''">
+            "${province}",
+        </if>
+        <if test="city != null and city != ''">
+            "${city}",
+        </if>
+        <if test="diagnosed != null and diagnosed != ''">
+            "${diagnosed}",
+        </if>
+        <if test="temperature != null and temperature != ''">
+            "${temperature}"
+        </if>
+        )
+    </insert>
+
+</mapper>
