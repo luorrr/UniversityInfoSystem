@@ -15,6 +15,8 @@ import com.nwnu.service.TeacherService;
 /**
  * Filename: TeacherController.java
  * 
+ * ·教师服务控制器
+ * 
  * @author Luor
  * @version 1.0
  */
@@ -26,6 +28,13 @@ public class TeacherController {
 	@Autowired
 	private TeacherService teacherService;
 	
+	/**
+	 * ·该方法负责控制插入教师信息
+	 * 
+	 * @param teacher
+	 * @param session
+	 * @return
+	 */
 	@RequestMapping("/teacherInput")
 	@ResponseBody
 	public String insertTeacher(Teacher teacher, HttpSession session) {

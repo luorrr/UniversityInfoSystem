@@ -15,6 +15,8 @@ import com.nwnu.service.StudentService;
 /**
  * Filename: StudentController.java
  * 
+ * ·学生服务控制器
+ * 
  * @author Luor
  * @version 1.0
  */
@@ -26,6 +28,13 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 	
+	/**
+	 * ·该方法负责控制插入学生信息
+	 * 
+	 * @param student
+	 * @param session
+	 * @return
+	 */
 	@RequestMapping("/studentInput")
 	@ResponseBody
 	public String insertStudent(Student student, HttpSession session) {

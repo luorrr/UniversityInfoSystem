@@ -20,11 +20,23 @@ public class TeacherServiceImpl implements TeacherService {
 	@Autowired
 	private TeacherDao teacherDao;
 	
+	/**
+	 * ·该方法负责教师信息插入
+	 * 
+	 * @param teacher
+	 * @return 教师类实体
+	 */
 	@Override
 	public Integer insertTeacher (Teacher teacher) {
 		return this.teacherDao.insertTeacher(teacher);
 	}
 	
+	/**
+	 * ·该方法负责根据工号与日期查询教师信息
+	 * 
+	 * @param teacher
+	 * @return 教师类实体
+	 */
 	@Override
 	public Teacher getTeacherByIdAndDate(Teacher teacher) {
 		return this.teacherDao.getTeacherByIdAndDate(teacher);
